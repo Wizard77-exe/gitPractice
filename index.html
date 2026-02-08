@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <h1>ENTER WHAT i ASK</h1>
+
+        <input type="text" placeholder="Username" required>
+        <input type="text" placeholder="Your Full Name" id="fname" required>
+        <button id="btn">ENTER</button>
+    </div>
+    <script>
+        const name = document.getElementById("fname");
+        const div = document.querySelector(".container");
+        const btn = document.getElementById("btn");
+
+
+        btn.addEventListener("click", ()=>{
+            let name = document.getElementById("fname").value;
+            div.innerHTML = "";
+            const msg = document.createElement("h1");
+            msg.textContent = "Fuck You";
+            msg.className = "msg";
+            const nameHolder = document.createElement("h1");
+            nameHolder.textContent = name;
+            nameHolder.className = "name";
+            div.append(msg, nameHolder);
+        });
+    </script>
 </body>
+
 </html>
