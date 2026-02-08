@@ -31,17 +31,21 @@
         }
 
         btn.addEventListener("click", () => {
-            let name = document.getElementById("fname").value;
-            div.innerHTML = "";
-            const msg = document.createElement("h1");
-            msg.textContent = messages[getRandomInt(0, 2)];
-            msg.className = "msg";
-            const nameHolder = document.createElement("h1");
-            nameHolder.textContent = name;
-            nameHolder.className = "name";
-            const img = document.createElement("img");
-            img.src = "icon.png";
-            div.append(msg, nameHolder, img);
+            if (name.value == "Jaypee" || name.value == "jaypee") {
+                alert("The name " + name.value + " is not allowed.");
+            } else {
+                let name = document.getElementById("fname").value;
+                div.innerHTML = "";
+                const msg = document.createElement("h1");
+                msg.textContent = messages[getRandomInt(0, 2)];
+                msg.className = "msg";
+                const nameHolder = document.createElement("h1");
+                nameHolder.textContent = name;
+                nameHolder.className = "name";
+                const img = document.createElement("img");
+                img.src = "icon.png";
+                div.append(msg, nameHolder, img);
+            }
         });
     </script>
 </body>
