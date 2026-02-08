@@ -50,3 +50,37 @@ button {
     color: white;
     font-size: 100px;
 }
+
+/* =======================
+   MOBILE RESPONSIVENESS
+   ======================= */
+@media screen and (max-width: 600px) {
+
+    body {
+        padding: 10px;
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    input,
+    button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .msg,
+    .name {
+        font-size: 40px;
+        word-break: break-word;
+        text-align: center;
+    }
+}
