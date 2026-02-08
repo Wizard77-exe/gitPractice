@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Spread-The-Kakupalan</title>
 </head>
 
 <body>
@@ -21,17 +22,26 @@
         const div = document.querySelector(".container");
         const btn = document.getElementById("btn");
 
+        let messages = ["Fuck You", "Muka kang Burat", "Mangingiyot ng Saging si"];
 
-        btn.addEventListener("click", ()=>{
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        btn.addEventListener("click", () => {
             let name = document.getElementById("fname").value;
             div.innerHTML = "";
             const msg = document.createElement("h1");
-            msg.textContent = "Fuck You";
+            msg.textContent = messages[getRandomInt(0, 2)];
             msg.className = "msg";
             const nameHolder = document.createElement("h1");
             nameHolder.textContent = name;
             nameHolder.className = "name";
-            div.append(msg, nameHolder);
+            const img = document.createElement("img");
+            img.src = "icon.png";
+            div.append(msg, nameHolder, img);
         });
     </script>
 </body>
