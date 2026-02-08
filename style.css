@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(17, 17, 17);
+}
+
+h1 {
+    color: rgb(175, 173, 173);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 2px black solid;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgb(53, 52, 52);
+}
+
+input {
+    width: 350px;
+    height: 40px;
+}
+
+button {
+    background: rgb(107, 238, 107);
+    height: 40px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.msg, .name {
+    color: white;
+    font-size: 100px;
+}
